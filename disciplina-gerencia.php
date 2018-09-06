@@ -29,13 +29,10 @@ $disciplinas = listarDisiciplinas(); ?>
             <thead>
                 <tr>
                     <th scope='col'></th>
-                    <th scope='col'>Nome</th>
+                    <th class='nomecol' scope='col'>Nome</th>
+                    <th class='semresultado' scope='col'>Nenhum resultado</th>
                 </tr>
             </thead>
-            <tr class="semresultado">
-                <th scope='row'></th>
-                <td>Nenhum resultado</td>
-            </tr>
             <tbody id="conteudo">
         <?php foreach($disciplinas as $disciplina) { ?>
             <tr>
@@ -64,29 +61,27 @@ $disciplinas = listarDisiciplinas(); ?>
         $(".pesquisar").keyup(function () {
             var termoBusca = $(".pesquisar").val();
             var listaItem = $('#conteudo').children('tr');
-            var searchSplit = termoBusca.replace(/ /g, "'):containsi('")
+            var splitPesquisa = termoBusca.replace(/ /g, "'):containsi('")
             
-        $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
-                return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
-            }
-        });
-            
-        $("#conteudo tr").not(":containsi('" + searchSplit + "')").each(function(e){
-            $(this).attr('visible','false');
-        });
-
-        $("#conteudo tr:containsi('" + searchSplit + "')").each(function(e){
-            $(this).attr('visible','true');
-        });
-
-        var jobCount = $('#conteudo tr[visible="true"]').length;
-            $('.counter').text(jobCount + ' item');
-
-        if(jobCount == '0') {
-            $('.semresultado').show();
-        } else {
-            $('.semresultado').hide();
-        }  
+            $.extend($.expr[':'], {
+                'containsi': function(elem, i, match, array){
+                    return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
+            $("#conteudo tr").not(":containsi('" + splitPesquisa + "')").each(function(e){
+                $(this).attr('visible','false');
+            });
+            $("#conteudo tr:containsi('" + splitPesquisa + "')").each(function(e){
+                $(this).attr('visible','true');
+            });
+            var nAchados = $('#conteudo tr[visible="true"]').length;
+            if(nAchados == '0') {
+                $('.semresultado').show();
+                $('.nomecol').hide();
+            } else {
+                $('.semresultado').hide();
+                $('.nomecol').show();
+            }  
         });
     });
 
