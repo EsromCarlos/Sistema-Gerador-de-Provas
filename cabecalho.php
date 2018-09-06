@@ -1,10 +1,16 @@
 <html>
 <head>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
+    <meta charset="UTF-8">
+    <title>SisPro | Sistema de Provas</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="js/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/i18n/pt-BR.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/sispro.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.css">
+    <link rel="stylesheet" type="text/css" href="css/select2-bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -18,28 +24,25 @@
         <li class="nav-item">
             <a class="nav-link" href="index.php">Página Inicial</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="gerenciar-questoes.php">Gerenciar Questões</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Gerenciar Provas</a>
-        </li>
-        <!-- DropDown
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Gerenciar Questões
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="dropdown-item" href="questoes-form.php">Adicionar Questões</a>
+            <a class="dropdown-item" href="questoes-gerencia.php">Gerenciar</a>
         </li>
-        -->
+        <li class="nav-item">
+            <a class="nav-link" href="disciplina-gerencia.php">Disciplinas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gerar Provas</a>
+        </li>
         </ul>
     </div>
     </nav>
+    <div class="container">
+        <div class="principal">
 <script>
 $(document).ready(function() {
   $('li.active').removeClass('active');
