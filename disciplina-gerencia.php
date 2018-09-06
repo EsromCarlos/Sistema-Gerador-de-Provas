@@ -30,6 +30,7 @@ $disciplinas = listarDisiciplinas(); ?>
                 <tr>
                     <th scope='col'></th>
                     <th class='nomecol' scope='col'>Nome</th>
+                    <th class='nomecol' scope='col'></th>
                     <th class='semresultado' scope='col'>Nenhum resultado</th>
                 </tr>
             </thead>
@@ -61,11 +62,11 @@ $disciplinas = listarDisiciplinas(); ?>
         $(".pesquisar").keyup(function () {
             var termoBusca = $(".pesquisar").val();
             var listaItem = $('#conteudo').children('tr');
-            var splitPesquisa = termoBusca.replace(/ /g, "'):containsi('")
+            var splitPesquisa = termoBusca.replace(/ /g, "'):containsi('");
             
             $.extend($.expr[':'], {
                 'containsi': function(elem, i, match, array){
-                    return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                    return (elem.innerText.replace("Editar","").replace("Remover","") || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
                 }
             });
             $("#conteudo tr").not(":containsi('" + splitPesquisa + "')").each(function(e){

@@ -28,7 +28,7 @@ $disciplinas = listarDisiciplinas();
         images_upload_url: 'tinymce-imagem.php',
         resize: false,
         statusbar:false,
-        height : "400",
+        height : "65%",
         entity_encoding : "raw"
     }); 
     
@@ -38,13 +38,15 @@ $disciplinas = listarDisiciplinas();
             selectOnClose: true,
             language: "pt-BR",
             width: '100%',
-            theme: "bootstrap"
+            theme: "bootstrap",
+            dropdownParent: $("#alertamodal") 
         });
         $('#select-gabarito').select2({
             selectOnClose: true,
             language: "pt-BR",
             width: '100%',
-            theme: "bootstrap"
+            theme: "bootstrap",
+            dropdownParent: $("#alertamodal") 
         });
     }
     function adicionarQuestao() {

@@ -15,8 +15,18 @@ function listarDisiciplinas() {
     while($disciplina = mysqli_fetch_assoc($resultado)) {
         array_push($disciplinas, $disciplina);
     }
-
     return $disciplinas;
+}
+
+function listarQuestoes() {
+    $questoes = array();
+    global $conexao;
+    $query = "select * from questoes";
+    $resultado = mysqli_query($conexao, $query);
+    while($questao = mysqli_fetch_assoc($resultado)) {
+        array_push($questoes, $questao);
+    }
+    return $questoes;
 }
 
 function adicionarDisciplina($disciplina) {
