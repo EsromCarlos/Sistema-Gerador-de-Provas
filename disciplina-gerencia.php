@@ -6,7 +6,7 @@ $disciplinas = listarDisiciplinas(); ?>
         <form id="cadastraDisiciplina">
             <div class="form-group row">
                 <div class="col">
-                    <label>Disciplina:</label>
+                    <label>Cadastrar Disciplina:</label>
                     <input id="disciplina" name="nome" class="form-control" placeholder="Entre com o nome da Disciplina" type="text">
                 </div>
             </div>  

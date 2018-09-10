@@ -47,3 +47,6 @@ function alterarDisciplina($disciplina, $novonome) {
     return mysqli_query($conexao, $query);
 }
 
+function limitarTexto($texto) {
+    return substr($texto,0,100) . "...";
+}

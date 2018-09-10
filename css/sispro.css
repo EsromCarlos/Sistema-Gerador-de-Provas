@@ -59,3 +59,11 @@
     overflow: hidden;
     text-overflow: clip;
 }
+
+#conteudoQ tr[visible='false']{
+    display: none;
+}
+
+#conteudoQ tr[visible='true']{
+    display:table-row;
+}

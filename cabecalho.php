@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SisPro | Sistema de Provas</title>
+    <title>SisPro | Sistema Gerador de Provas</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
