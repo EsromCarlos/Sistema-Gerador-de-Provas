@@ -1,5 +1,20 @@
 .navbar li a {
     font-size: 18px;
+    color: #444444;
+    display: block;
+    font-weight: 40;
+    line-height: 35px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+    color: #1bb4b9
+}
+
+.navbar {
+    background: #fff;
 }
 
 #cadastraQuestao {
@@ -59,3 +74,4 @@
     overflow: hidden;
     text-overflow: clip;
 }
+
