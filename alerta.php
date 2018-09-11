@@ -1,10 +1,13 @@
 <script>
-    function alerta(titulo, mensagem, rodape) {
+    function alerta(titulo, mensagem, rodape, tamanho) {
         $('#alertaModal').modal('hide');
         $("#tituloAlerta").html(titulo);
         $("#corpoAlerta").html(mensagem);
         if (rodape !== undefined) {
             $("#alertaRodape").html(rodape);
+        }
+        if (tamanho !== undefined) {
+            $("#alertat").attr("class","modal-dialog-" + tamanho);
         }
         $("#alertamodal").modal();
         
@@ -28,7 +31,7 @@
 
 </script>
 <div class="modal fade" id="alertamodal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+    <div id="alertat" class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header">
             <h5 id="tituloAlerta" class="modal-title"></h5>

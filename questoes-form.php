@@ -1,4 +1,4 @@
-<?php require_once("cabecalho.php");
+<?php
 require_once("banco-questao.php");
 $disciplinas = listarDisiciplinas();
 ?>
@@ -12,7 +12,7 @@ $disciplinas = listarDisiciplinas();
             </div> 
             <div class="form-group row">
                 <div class="col-sm-1">
-                    <button id="cadastrar" class="btn btn-outline-primary" type="button" onclick="adicionarQuestao();">Finalizar</button>
+                    <button id="cadastrar" class="btn btn-outline-primary" type="button" data-dismiss="modal" onclick="adicionarQuestao();">Finalizar</button>
                 </div>
             </div>
         </form>
@@ -86,4 +86,3 @@ $disciplinas = listarDisiciplinas();
         });
     }
 </script>
-<?php require_once("rodape.php") ?>

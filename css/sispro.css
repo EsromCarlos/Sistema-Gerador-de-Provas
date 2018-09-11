@@ -1,9 +1,21 @@
+.topo {
+    background: #1bb4b9;
+    width: 100%;
+    height: 27px;
+}
+
+.barra {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 .navbar li a {
-    font-size: 18px;
+    font-size: 19px;
     color: #444444;
     display: block;
-    font-weight: 40;
-    line-height: 35px;
+    line-height: 40px;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -22,8 +34,12 @@
 }
 
 .principal {
-    padding: 10px 10px;
+    padding: 200px 10px;
     text-align: center;
+}
+
+.back {
+    background: #fcfefe;
 }
 
 .container {
@@ -57,12 +73,8 @@
     max-width: 200px;
 }
 
-#conteudo tr[visible='false']{
+#conteudo tr[visible='false'], .semresultado{
     display: none;
-}
-
-.semresultado{
-    display:none;
 }
 
 #conteudo tr[visible='true']{
